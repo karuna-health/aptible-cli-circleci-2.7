@@ -11,5 +11,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -f aptible-cli.deb
 
+RUN apt-get install -y libffi6
+
 RUN curl -sL https://sentry.io/get-cli/ | bash
 
